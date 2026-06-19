@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="eng">
     <head>
+        <meta name = "description" content = "This is the about us page for Elevated Faith, a company that sells faith-based apparel and jewellery.">
+        <meta name = "keywords" content = "Elevated Faith, faith-based apparel, jewellery, about us">
+        <meta name = "author" content = "Kgothatso Lekabe">
+        <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+        <meta charset = "UTF-8">
         <title>Products Page</title>
     </head>
     <body>
@@ -17,18 +22,164 @@
             </nav>
         </header>
         </main>
+        
+        <style>
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #111;
+  color: white;
+}
+
+/* Title */
+h1 {
+  text-align: center;
+  padding: 20px;
+}
+
+/* GRID FIX (alignment + equal sizing) */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+
+/* FORCE SAME SIZE */
+.gallery img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* LIGHTBOX FIX (this is what you were missing visually) */
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.95);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 999;
+}
+
+/* CENTER IMAGE */
+.lightbox img {
+  max-width: 85%;
+  max-height: 80%;
+  border-radius: 12px;
+}
+
+/* CLOSE BUTTON */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+/* NAV ARROWS */
+.nav {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.nav span {
+  font-size: 55px;
+  cursor: pointer;
+  padding: 20px;
+  user-select: none;
+}
+
+.caption {
+  margin-top: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<h1><u>Elevated Faith Apparel</u></h1>
+<!-- GALLERY -->
+<div class="gallery">
+  <img src="Images/Child-of-God-Unisex-Hoodie_.webp" onclick="openLightbox(0)">
+  <img src="Images/elevated-faith-ring-christian-ring-" onclick="openLightbox(1)">
+  <img src="Images/men" onclick="openLightbox(2)">
+  <img src="Images/Hope-of-the-World-Unisex-Tee_.webp" onclick="openLightbox(3)">
+  <img src="Images/kids denim" onclick="openLightbox(4)">
+  <img src="Images/disciples-unisex-hoodie-christian-hoodie" onclick="openLightbox(5)">
+  <img src="Images/Highs-and-Lows-Denim-Jacket_" onclick="openLightbox(6)">
+  <img src="Images/bracelet.webp" onclick="openLightbox(7)">
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+
+  <span class="close" onclick="closeLightbox()">&times;</span>
+
+  <div class="nav">
+    <span onclick="changeSlide(-1)">&#10094;</span>
+    <span onclick="changeSlide(1)">&#10095;</span>
+  </div>
+  <img id="lightbox-img">
+  <div class="caption" id="caption"></div>
+</div>
+<script>
+const images = [
+  "Images/child-of-god.webp",
+  "Images/elevated-ring.webp",
+  "Images/men.webp",
+  "Images/hope-world.webp",
+  "Images/kids-denim.webp",
+  "Images/disciples-hoodie.webp",
+  "Images/highs-lows-jacket.webp",
+  "Images/bracelet.webp"
+];
+
+let currentIndex = 0;
+
+function openLightbox(index) {
+  currentIndex = index;
+  document.getElementById("lightbox").style.display = "flex";
+  updateImage();
+}
+
+function closeLightbox() {
+  document.getElementById("lightbox").style.display = "none";
+}
+
+function changeSlide(step) {
+  currentIndex += step;
+
+  if (currentIndex < 0) currentIndex = images.length - 1;
+  if (currentIndex >= images.length) currentIndex = 0;
+
+  updateImage();
+}
+
+function updateImage() {
+  document.getElementById("lightbox-img").src = images[currentIndex];
+  document.getElementById("caption").innerText =
+    `Item ${currentIndex + 1} of ${images.length}`;
+}
+</script>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
         <style>
             body { background-color: white; color: black; font-family: Arial, Helvetica, sans-serif.}
         </style>
-        <h1 align="center"><bold></bold><u>Elevated Faith Apperal</u></h1>
-        <image src="Images/Child-of-God-Unisex-Hoodie_.webp" style="width:350; height: 250;"></image>
-         <image src="Images/elevated-faith-ring-christian-ring-" style="width:350; height: 250;"></image>
-          <image src="Images/men" style="width:350; height: 250;"></image>
-           <image src="Images/Hope-of-the-World-Unisex-Tee_.webp" style="width:350; height: 250;"></image>
-            <image src="Images/kids denim" style="width:350; height: 250;"></image>
-             <image src="Images/disciples-unisex-hoodie-christian-hoodie" style="width:350; height: 250;"></image>
-              <image src="Images/Highs-and-Lows-Denim-Jacket_" style="width:350; height: 250;"></image>
-               <image src="Images/bracelet.webp" style="width: 350; height: 250;"></image>
         </main>
         <footer> &copy;ST10481775</footer>
     </body>

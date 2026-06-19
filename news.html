@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html lang="eng">
     <head>
+        <meta name = "description" content = "This is the about us page for Elevated Faith, a company that sells faith-based apparel and jewellery.">
+        <meta name = "keywords" content = "Elevated Faith, faith-based apparel, jewellery, about us">
+        <meta name = "author" content = "Kgothatso Lekabe">
+        <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+        <meta charset = "UTF-8">
         <title>News Page</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
     <body>
         <header>
-            <img src="Images/Logo.png" style="width:600px; height:200px;">
+            <img src="Images/Logo.png" style="width:300px; height:200px;">
             <nav align="left">
                 <hr>
                 <a href="home.html">Home| </a>
@@ -19,12 +25,82 @@
         </main>
         <style>
             body { background-color: white; color: black; font-family: Arial, Helvetica, sans-serif.;}
-        </style>
-        <h1 align="center">New Arrivals!! [Take an additional 20% off all these sale items! This week ONLY]</h1>
-       <image src="Images/Lilac-Enamel-Cross-Ring_.webp" style="width: 350; height: 300;"> LILAC ENAMEL CROSS RING</image>
-       <image src="Images/John-3-16-Lightweight-Beanie_.webp" style="width: 350; height: 300;">JOHN 3:16 BEANIE</image>
-       <image src="Images/The-Sacrifice-Camo-Unisex-Hoodie_.webp" style="width: 350; height: 300;">THE SACRIFICE CAMOUFLAGE UNISEX HOODIE</image>
-        </main>
+                  </style>
+       <h1>New Arrivals!! [Take an additional 20% off all these sale items! This week ONLY]</h1>
+       <style>
+.gallery img {
+  width: 50%;
+  height: 600px;
+  object-fit: cover;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+       </style>
+<!-- GALLERY -->
+<div class="gallery">
+  <img src="Images/Lilac-Enamel-Cross-Ring_.webp" onclick="openLightbox(0)">
+  <img src="Images/John-3-16-Lightweight-Beanie_.webp" onclick="openLightbox(1)">
+  <img src="Images/The-Sacrifice-Camo-Unisex-Hoodie_.webp" onclick="openLightbox(2)">
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+
+  <span class="close" onclick="closeLightbox()">&times;</span>
+
+  <div class="nav">
+    <span onclick="changeSlide(-1)">&#10094;</span>
+    <span onclick="changeSlide(1)">&#10095;</span>
+  </div>
+  <img id="lightbox-img">
+  <div class="caption" id="caption"></div>
+</div>
+<script>
+
+const images = [
+  "Images/Lilac-Enamel-Cross-Ring_.webp",
+  "Images/John-3-16-Lightweight-Beanie_.webp",
+  "Images/The-Sacrifice-Camo-Unisex-Hoodie_.webp"
+];
+
+let currentIndex = 0;
+
+function openLightbox(index) {
+  currentIndex = index;
+  document.getElementById("lightbox").style.display = "flex";
+  updateImage();
+}
+
+function closeLightbox() {
+  document.getElementById("lightbox").style.display = "none";
+}
+
+function changeSlide(step) {
+  currentIndex += step;
+
+  if (currentIndex < 0) currentIndex = images.length - 1;
+  if (currentIndex >= images.length) currentIndex = 0;
+
+  updateImage();
+}
+
+function updateImage() {
+  document.getElementById("lightbox-img").src = images[currentIndex];
+  document.getElementById("caption").innerText =
+    `Item ${currentIndex + 1} of ${images.length}`;
+}
+</script>
+</style>
+</head>
+
+<body>
+
+
+</style>
+</head>
+
+<body>
         <footer> &copy;ST10481775</footer>
     </body>
 </html>

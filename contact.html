@@ -1,11 +1,166 @@
 <!DOCTYPE html>
 <html lang="eng">
     <head>
+        <meta name = "description" content = "This is the about us page for Elevated Faith, a company that sells faith-based apparel and jewellery.">
+        <meta name = "keywords" content = "Elevated Faith, faith-based apparel, jewellery, about us">
+        <meta name = "author" content = "Kgothatso Lekabe">
+        <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+        <meta charset = "UTF-8">
         <title>Contact Us Page</title>
+        <style>
+            :root {
+                --navy: #1f3864;
+                --blue: #2e75b6;
+                --error: #c0392b;
+                --error-bg: #fdf0ee;
+                --success: #2e7d4f;
+                --success-bg: #eaf6ef;
+                --border: #d4d8de;
+                --text: #1c1f26;
+                --bg: #f7f8fa;
+            }
+            *  box-sizing: border-box; 
+            
+            body{
+                font-family: 'Segoe UI', Arial,sans-serif;
+                background: var(--bg);
+                color: var(--text);
+                margin: 0;
+                padding: 40px 20px;
+                display: flex;
+                justify-content: center;
+            }
+            .card {
+                background: #fff;
+                width: 100%;
+                max-width: 480px;
+                border-radius: 12px;
+                box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+                padding: 36px;
+            }
+            h1 {
+                font-size: 22px;
+                margin: 0 0 6px;
+                color: var(--navy);
+            }
+            .field {
+                margin-bottom: 20px;
+                position:relative;
+            }
+            label {
+                display: block;
+                font-size: 13px;
+                font-weight: 600;
+                margin-bottom: 6px;
+                color: var(--text);
+            }
+            label .req {color:var(--error);margin-left: 2px;}
+        
+            input .select {
+                width: 100%;
+                padding: 11px 12px;
+                font-size: 14px;
+                border: 1.5px solid var(--border);
+                border-radius: 8px;
+                transition: border-color 0.15s box-shadow0.15s ease;
+                background: #fff
+                font-family: inherit;
+            }
+
+            input: focus. selec:focus {
+                outline: none;
+                border-color: var(--blue);
+                box-shadow: 0 0 0 3px rgba(46,117,182,0.15);
+            }
+
+            input.error {
+                border-color: var(--error);
+                background: var(--error-bg);
+            }
+
+            input.success. select.success {
+                border-color: var(--success);
+        }
+        .error-message {
+            color: var(--error);
+            font-size: 12.5px;
+            margin-top: 6px;
+            display: none;
+            align-items: center;
+            gap: 4px;
+        }
+        .error-message.show {
+            display: flex;
+        }
+        .hint {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+        .password-strength {
+            height: 4px;
+            background: var(--border);
+            border-radius: 2px;
+            margin-top: 8px;
+            overflow: hidden;
+        }
+        .password-strength-fill {
+            height: 100%;
+            border-radius: 2px;
+            width: 0;
+            transition: width 0.25s. background 0.25s;
+        }
+        button[type="submit"] {
+            width: 100%;
+            padding: 13px;
+            background: var(--navy);
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.15s ease;
+            margin-top: 8px;
+        }
+
+        button[type="submit"]:hover {
+            background: var(--blue);
+            button[type="submit"]:active {transform: scale(0.99);}  
+
+        .banner {
+            display: none;
+            padding: 12px 14px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+        .banner.show {
+            display: block;
+
+         .banner.success {
+            background: var(--success-bg);
+            color: var(--success);
+            border: 1px solid #b8e0c5   
+        }
+
+        .char-count {
+            font-size: 12px;
+            color: var(--success);
+            border: 1px solid #b8e0c5;
+        }
+        .char-count {
+            font-size: 11.5px
+            color: var(--text-muted);
+            text-align: right;
+            margin-top: 4px;
+        }
+        </style>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
     <body>
         <header>
-            <img src="Images/Logo.png" style="width:600px; height:200px;">
+            <img src="Images/Logo.png" style="width:300px; height:200px;">
             <nav align="left">
                 <hr>
                 <a href="home.html">Home| </a>
@@ -17,7 +172,291 @@
             </nav>
         </header>
         </main>
-        For our contact information, click on the link provided: <a href="https://help.elevatedfaith.com/hc/elevated-faith-faq/articles/1756410769-contact-information">Contact us</a>
+        <script src="Java Script/script.js"></script>
+
+        <h1></h1><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3580.1224437082037!2d28.0339324!3d-26.1926949!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950c1bb2ad5483%3A0xffc2ed86c651c235!2sBraamfontein%20Centre%2C%2023%20Jorissen%20St%2C%20Braamfontein%2C%20Johannesburg%2C%202017!5e0!3m2!1sen!2sza!4v1781797667300!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+       <h2></h2> For our contact information, click on the link provided: <a href="https://help.elevatedfaith.com/hc/elevated-faith-faq/articles/1756410769-contact-information">Contact us</a>
+<h3>Kindly fill in the form below:</h3>
+       <form id="signupForm" novalidate>
+        <div class ="field">
+            <label for ="fullName">Full Name <span class="required">*</span></label>
+            <input type="text" id="fullName" name="fullName" autocomplete="name" placeholder="Enter your full name">
+            <div class="error-message" id="fullNameError"></div> 
+        </div>
+
+        <div class ="field">
+            <label for ="email">Email <span class="required">*</span></label>
+            <input type="email" id="email" name="email" autocomplete="email" placeholder="Enter your email address">
+            <div class="error-message" id="emailError"></div>
+        </div>
+
+        <div class ="field">
+            <label for ="phone">Contact Number <span class="required">*</span></label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="Enter your contact number">
+            <div class="hint" type="text" readonly value="10 digits, no spaces or special characters"></div>
+            <div class="error-message" id="phoneError"></div>
+        </div>
+
+        <div class ="field">
+            <label for ="age">Age <span class="required">*</span></label>
+            <input type="number" id="age" name="age" autocomplete="age" placeholder="Enter your age">
+            <div class="error-message" id="ageError"></div> 
+        </div>
+
+        <div class ="field">
+            <label for ="password">Password <span class="required">*</span></label>
+            <input type="password" id="password" name="password" autocomplete="new-password" placeholder="Enter your password">
+            <div class ="password-strength"><div class ="password-strength-fill" id="strengthFill"></div></div>
+            <div class="hint" id="strengthLabel">Password must be at least 8 characters long, with a mix of letters and numbers.</div>
+            <div class="error-message" id="passwordError"></div> 
+        </div>
+
+        <div class ="field">
+            <label for ="confirmPassword">Confirm Password <span class="required">*</span></label>
+            <input type="password" id="confirmPassword" name="confirmPassword" autocomplete="new-password" placeholder="Confirm your password">
+            <div class="error-message" id="confirmPasswordError"></div> 
+        </div>
+
+        <div class ="field">
+            <label for ="bio">Short story <span class="required">*</span></label>
+            <input type="text" id="bio" name="bio" autocomplete="Optional, max 100 characters" placeholder="Optional">
+            <div class="char-count" id="bioCount">0/100</div>
+            <div class="error-message" id="bioError"></div>
+            <div>
+            
+            <button type="submit">Create account</button> <button type="reset">Clear</button> 
+            </form>    
+            </div>
+        
+            <script>
+                (function() {
+                    const form = document.getElementById('signupForm');
+                    const successBanner = document.getElementById('successBanner');
+
+                    const fields={
+                        fullName:{el:document.getElementById('fullName'), errorEl:document.getElementById('fullNameError')},
+                        email:{el:document.getElementById('email'), errorEl:document.getElementById('emailError')},
+                        phone:{el:document.getElementById('phone'), errorEl:document.getElementById('phoneError')},
+                        age:{el:document.getElementById('age'), errorEl:document.getElementById('ageError')},
+                        password:{el:document.getElementById('password'), errorEl:document.getElementById('passwordError')},
+                        confirmPassword:{el:document.getElementById('confirmPassword'), errorEl:document.getElementById('confirmPasswordError')},
+                        bio:{el:document.getElementById('bio'), errorEl:document.getElementById('bioError')}    
+                    }
+                );
+                function setSucess(field){
+                   field.el.classList.remove('error');
+                   field.el.classList.add('success');
+                    field.el.classList.remove('error');
+                    field.errorEl.textContent='';
+                ) 
+                function clearState(field){
+                    field.el.classList.remove('error','success');
+                
+                    field.errEl.classlist.remove('show');
+                    field.errorEl.textContent='';
+                )
+                function validateFullName(showState=true){
+                    const value = fields.fullName.el.value.trim();
+                    if(value.length===0){
+                        if(showState) setError(fields.fullName,'Full name is required');
+                        return false;
+                    } 
+                     if(value.length < 3){
+                       if (showState) setError(fields.fullName,'Full name must be at least 2 characters');
+                        return false;
+                    } 
+                      if(!/^[A-Za-z\s*-]+$/.test(value)) 
+                      if(showState) setError(fields.fullName,'Full name can only contain letters, spaces, hyphens and apostrophes');
+                        return false;
+                }
+                if(showState) setSuccess(fields.fullName);
+                    return true;
+                }
+                funtion validateEmail(showState=true){
+                    const value=fields.email.el.value.trim();
+                    const pattern=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if(value.length===0){
+                        if(showState) setError(fields.email,'Email is required');
+                        return false;
+                    }
+                    if(!pattern.test(value)){
+                        if(showState) setError(fields.email,'Please enter a valid email address');
+                        return false;
+                }
+                    if(showState) setSuccess(fields.email);
+                    return true;
+                }
+                funtion validatePhone(showState=true){
+                    const raw=fields.phone.el.value.trim();
+                    const digitsOnly= raw.replace(/[\s()-]/g,'');
+                    if(raw.length===0){
+                        if(showState) setError(fields.phone,'Contact number is required');
+                        return false;
+                    }
+                    if(!/^\d{10}$/.test(digitsOnly)){
+                        if(showState) setError(fields.phone,'Contact number must be 10 digits, no spaces or special characters');
+                        return false;
+                    }
+                    if(showState) setSuccess(fields.phone);
+                    return true;
+                }
+                function validateAge(showState=true){
+                    const value=fields.age.el.value.trim();
+                    if(value.length===0){
+                        if(showState) setError(fields.age,'Age is required');
+                        return false;
+                    }
+                    if(!/^\d+$/.test(value)
+                        if(showState) setError(fields.age,'Please enter a valid age between 18 and 120');
+                        return false;
+                    }
+                    const num=parseInt(value,10);
+                    if(num<13)} {
+                        if(showState) setError(fields.age,'You must be at least 13 years old');
+                        return false;
+                    }
+                    if(num>120) {
+                        if(showState) setError(fields.age,'Please enter a realistic age');
+                        return false;
+                    }
+                    if(showState) setSuccess(fields.age);
+                    return true;
+                }
+                function getPasswordStrength(value) {
+                    let score=0;
+                    if(value.length>=8) score++;
+                    if(/[A-Z]/.test(value)) score++;
+                    if(/[a-z]/.test(value)) score++;
+                    if(/\d/.test(value)) score++;
+                    if(/[@$!%*?&]/.test(value)) score++;
+                    return score; //0-5
+                }
+                function updateStrengthMeter() {
+                    const value=fields.password.el.value;
+                    const strength=getPasswordStrength(value);
+                    const fill=document.getElementById('strengthFill');
+                    const label=document.getElementById('strengthLabel');
+                    const percent=(strength/5)*100;
+                    fill.style.width=percent+'%';
+
+                    if(value.strength===0){ {
+                        fill.style.background='#d4d8de';
+                        label.textContent='Use 8+ characters with a number and a symbol';
+                        label.style.color='';
+                    } else if(score<= 2) {
+                        fill.style.background='#c0392b';
+                        label.textContent='Weak password';
+                        label.style.color='#c0392b';
+                    } else if(score === 4) {
+                        fill.style.background='#e0a020';
+                        label.textContent='Fair password';
+                        label.style.color='#e0a020';
+                    } else if(score === 4){
+                        fill.style.background='#2e75b6';
+                        label.textContent='Good password';
+                        label.style.color='#2e75b6';
+                    } else {
+                        fill.style.background='#2e7d4f';
+                        label.textContent='Strong password';
+                        label.style.color='#2e7d4f';
+                    }
+                }
+                function validatePassword(showState=true) {
+                    const value=fields.password.el.value;
+                    if(value.length===0){
+                        if(showState) setError(fields.password,'Password is required');
+                        return false;
+                    }
+                    if(value.length<8){
+                        if(showState) setError(fields.password,'Password must be at least 8 characters long');
+                        return false;
+                    }
+                    if(!/[0-9]/.test(value)){
+                        if(showState) setError(fields.password,'Password must contain at least one number');
+                        return false;
+                    }
+                    if(!/[^A-Za-z0-9]/.test(value)){
+                        if(showState) setError(fields.password,'Password must contain at least one symbol');
+                        return false;
+                    }
+                    if(showState) setSuccess(fields.password);
+                    return true;
+                    }
+                    function validateBio(showState=true) {
+                        const value=fields.bio.el.value.trim();
+                        if(value.length>100) {
+                            if(showState) setError(fields.bio,'Bio cannot exceed 100 characters');
+                            return false;
+                        }
+                        if(showState) {
+                            if (value.length > 0) setSuccess(fields.bio);
+                            else clearState(fields.bio);
+                        }
+                        return true;
+                    }
+                    function updateBioCount() {
+                        const length=fields.bio.el.value.length;
+                        document.getElementById('bioCount').textContent=length+'/100';
+                    }
+                    //---Wire up live validation (validate on blur, clear-on-type for errors)---
+
+                    fields.fullName.el.addEventListener('blur',()=>validateFullName());
+                    fields.email.el.addEventListener('blur',()=>validateEmail());
+                    fields.phone.el.addEventListener('blur',()=>validatePhone());
+                    fields.age.el.addEventListener('blur',()=>validateAge());
+                    fields.password.el.addEventListener('blur',()=>validatePassword());
+                    fields.confirmPassword.el.addEventListener('blur',()=>validateConfirmPassword());
+                    fields.bio.el.addEventListener('input',()=>updateBioCount());
+
+                    fields.password.el.addEventListener('input',()=>updateStrengthMeter());
+                    fields.bio.el.addEventListener('input', updateBioCount());
+
+                    //Re-validate confirm password live if user edits password after already confirming
+                    fields.password.el.addEventListener('input',()=> {
+                        if(fields.confirmPassword.el.value.length>0) validateConfirmPassword();
+                    });
+
+                    //Clear error state soon as user starts correcting a field
+                    Object.values(fields).forEach(field=> {
+                        field.el.addEventListener('input',()=> {
+                            if(field.el.classList.contains('error')) {
+                                field.el.classList.remove('error');
+                                field.errorEl.classList.remove('show');
+                            }
+                        });
+                    });
+
+                    //---Form submission handler---
+
+                    form.addEventListener('submit', function(e) {
+                        e.preventDefault();
+                        successBanner.classLsit.remove('show');
+
+                        const validations = [
+                            validateFullName(),
+                            validateEmail(),
+                            validatePhone(),
+                            validateAge(),
+                            validatePassword(),
+                            validateConfirmPassword(),
+                            validateBio()
+                        ];
+                        const allValid = validations.every(Boolean);
+
+                        if(allValid) {
+                            successBanner.classList.add('show');
+                            successBanner.scrollIntoView({behavior:'smooth', block: 'center'
+                                //form.reset() and further submission logic ( e.g. fetch to server) goes here
+                            });
+                        } else {
+                            //Focus the first invalid field for accessibility
+                            const firstInvalid = form.querySelector('.error');
+                            if(firstInvalid) firstInvalid.focus();
+                        }
+                      });
+                    })();
+            </script>
+       </form>
         </main> 
         <footer> &copy;ST10481775</footer>
     </body>

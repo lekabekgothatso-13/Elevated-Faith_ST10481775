@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,200;0,400;1,400&family=Lato:wght@200;300;400&display=swap');
+/*--css variables--*/
+:root {
+  --black: #000000;
+  --grey: #f5f5f5;
+  --shadow: rgba(0, 0, 0, 0.15);
+  --font-heading: 'Playfair Display', serif;
+}
+/*reset & base*/
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 10px;
+  padding: 10px;
+}
+body {
+  background-color: var(--grey);
+  color: var(--black);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.75;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+p {
+  margin-bottom: 1rem;
+  color:var(--black);
+}
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  color: var(--black);
+  line-height: 1.145;
+  margin-bottom: 0.100rem;
+}
+h1{font-size: 2.8rem; font-weight: 700;}
+h2{font-size: 2rem; font-weight: 600;}
+h3{font-size: 1.35rem; font-weight: 500;}
+/*header*/
+header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  height: 200px;
+  background-color: var(--grey);
+  border-bottom: 10px solid var(--pink);
+  position: sticky;
+  z-index: 200;
+  box-shadow: 0 12px 12px var(--shadow);
+}
+header img {
+  height: 150px;
+  width: auto;
+  
+}
+/* navigation bar */
+nav{
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 1.350em;
+    text-transform: uppercase;
+    color: var(--black);
+    text-decoration: none;
+    margin-left: 32px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid transparent;
+    transition: color 0.25s, border-color 0.25s ease;
+    }
+    nav a:hover{
+        color: var(--black);
+    border-color: var(--black);
+    }
+    nav a:visited{
+        color: var(--black);
+    }
+    nav a:active{
+        color: var(--black);
+    }
+    button {
+        background-color: var(--black);
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        border-radius: 2px;
+        transition: background-color 0.25s ease, transform 0.15s ease;
+    }
+    button:hover {
+        background-color: var(--pink);
+        transform: translate(-1px);
+    }
+    button a{
+        display: inline-block;
+        padding: 12px 32px;
+        font-family: var(--font-body);
+        font-size: 0.82rem;
+        font-weight: 700;
+        letter-spacing: 1.14em;
+        text-transform: uppercase;
+        color: var(--cream);
+        text-decoration: none;
+    }
+    button a:hover
+    button a:visited
+    button a:active{
+        color: var(--black);
+        text-decoration: none;
+    }
+    /*footer*/
+    footer {
+        background-color: var(--gold);
+        border-top: 3px solid var(--black);
+        color: var(--pink);
+        padding: 48px 60px;
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        align-items: center;
+        gap: 40px;
+    }
+    .footer-img {
+        height: 52px;
+        width: auto;
+        border-radius: 4px;
+    }
+    .footer-contact {
+        display: flex;
+        gap: 8px;
+    }
+    .footer-contact-item{
+        height: 18px;
+        width: 18px;
+        flex-shrink: 0;
+    }
